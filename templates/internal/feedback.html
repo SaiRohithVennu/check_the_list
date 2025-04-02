@@ -34,16 +34,16 @@
                         <br><h2>Contact information</h2><hr /><br>
                         
                         <label for="name">*First Name:</label>
-                        <input type="text" id="name" name="name" style="width: 100%;" required><br><br>
+                        <input type="text" id="first_name" name="name" style="width: 100%;" required><br><br>
 
                         <label for="name">*Last Name:</label>
-                        <input type="text" id="name" name="name" style="width: 100%;" required><br><br>
+                        <input type="text" id="last_name" name="name" style="width: 100%;" required><br><br>
                 
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" style="width: 100%;"><br><br>
 
                         <label for="name">Phone Number:</label>
-                        <input type="text" id="name" name="name" style="width: 100%;"><br><br>
+                        <input type="text" id="phone" name="name" style="width: 100%;"><br><br>
 
                        
 
@@ -119,26 +119,35 @@
 <script>
     window.onload = () => {
         const supabaseUrl = 'https://zjybmrjtvyhkbsmdpfyg.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpqeWJtcmp0dnloa2JzbWRwZnlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk1NTg5OTQsImV4cCI6MjA1NTEzNDk5NH0.wadaSZG4k2Ej0Z6YOiBo6jgJ5Zw1r5JP4dncTtwKu8k';
+        const supabaseKey = 'your-supabase-key-here';
         const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         const submitBtn = document.getElementById('submitBtn');
-        submitBtn.addEventListener('click', async () => {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+        if (!submitBtn) {
+            console.error("Submit button not found!");
+            return;
+        }
+
+        submitBtn.addEventListener('click', async (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const first_name = document.getElementById('first_name').value.trim();
+            const last_name = document.getElementById('last_name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const quality = document.querySelector('input[name="quality"]:checked')?.value;
             const speed = document.querySelector('input[name="speed"]:checked')?.value;
             const satisfaction = document.querySelector('input[name="satisfaction"]:checked')?.value;
-            const comments = document.getElementById('comments').value;
+            const comments = document.getElementById('comments').value.trim();
 
-            if (!name || !email || !quality || !speed || !satisfaction) {
+            if (!first_name || !last_name || !phone || !quality || !speed || !satisfaction) {
                 alert("Please fill in all required fields.");
                 return;
             }
 
             const { data, error } = await supabase
                 .from('feedback')
-                .insert([{ name, email, quality, speed, satisfaction, comments }]);
+                .insert([{ first_name, last_name, email, phone, quality, speed, satisfaction, comments }]);
 
             if (error) {
                 console.error('Error inserting data:', error);
