@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 trackButtonClick(popupId);
             });
         });
+
+
+        
     } else if (document.title === 'Check-The-List Cybersecurity Hardening') {
         console.log('On Dashboard page');
         const clickList = document.getElementById('recent-clicks');
