@@ -3,25 +3,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<title>Login | Check-The-List</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Signup</title>
-	<link href=""rel="stylesheet">
 	<meta name="description" content="Check-The-List: A cybersecurity hardening project">
-	<title>Check-The-List - Cybersecurity Hardening</title>
+	<!--<link rel="stylesheet" href="{% static 'css/styles.css' %}">-->
 	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 	<link rel="icon" type="image/x-icon" href="/Images/favicon.ico/">
 </head>
-<body class="bg-gray-100 font-sans antialiased">
-	<!--Navbar-->
-	<nav class= "bg-blue-600 p-4 text-white flex justify-between">
-		<div>
-			<h1 class="text-3xl font-bold">Check-The-List - Cybersecurity Hardening </h1>
-		</div>
-		<div>
-			<a href="login" class="text-white hover:underline">Login</a>
+
+<body class="bg-gradient-to-br from-blue-100 to-gray-100 min-h-screen font-sans antialiased">
+	<header>
+	<!-- Navbar -->
+	<nav class="bg-blue-600 text-white px-6 py-4 shadow-md flex justify-between items-center">
+		<h1 class="text-xl md:text-2xl font-bold">Check-The-List - Cybersecurity Hardening</h1>
+		<div class="space-x-4 text-sm md:text-base">
+			<a href="login" class="navbtn">Logout</a>
 			<a href="{% url 'index'%}" class="navbtn">Home</a>
 		</div>
 	</nav>
+	</header>
+
 	<br>
 	<!--Main content -->
 	<div class="flex items-center justify-center h-screen">
