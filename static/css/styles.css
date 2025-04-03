@@ -1,5 +1,6 @@
-
-/* Styles for large overarching Areas */
+/* ------------------------------------- */
+/* ------------ General CSS ------------ */
+/* ------------------------------------- */
 
 * {
     margin: 0;
@@ -7,22 +8,6 @@
     box-sizing: border-box;
 }
 
-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #378039;
-    background-image: linear-gradient(to right, #378039 , #333);
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    align-items: center;
-    padding: 10px 70px;
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -57,42 +42,425 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* General Wrapper and Container Styles */
+hr {
+    width: 100%;
+    margin-top: 5px;
+    height:.2px;
+}
 
 
-.wrapper {
+
+/* ------------------------------------- */
+/* --------- NavBar/Header CSS --------- */
+/* ------------------------------------- */
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #378039;
+    background-image: linear-gradient(to right, #378039 , #333);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    align-items: center;
+    padding: 10px 70px;
+}
+
+
+
+.navbtn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.navbtn:hover {
+    background-color: #45a049;
+}
+
+.navone a {
+    padding-left: 20px;
+}
+
+
+
+/* ------------------------------------- */
+/* ----------- Index.html CSS ---------- */
+/* ------------------------------------- */
+
+.indexWrapperOne {
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    padding: .5rem 0;
+    width: 100%;
+    background-image: url('/static/css/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    float: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 5rem;
+}
+
+.indexWrapperTwo {
+    background-color: rgba(255,255,255,0.85);
+    width: 50%;
+    padding: 2.3rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.indexWrapperThree {
+    width: 25%;                    
+    padding: 25px;
+    text-align: center;
+    box-sizing: border-box;  
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin: 10px; 
+    background-color: #fff;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.indexWrapperThree h2 {
+    text-align: center;
+}
+
+.indexWrapperThree p {
+    text-align: left;
+}
+
+.indexContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;           
+    flex-wrap: wrap;    
+    padding-top: 25px;  
+    padding-bottom: 25px;   
+}
+
+.indexBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.indexBtn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* ------------------------------------- */
+/* --------- Contact.html CSS ---------- */
+/* ------------------------------------- */
+
+.contactWrapperOne {
     margin: auto;
     overflow: hidden;
     text-align: left;
     text-align: center;
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin: 10px; 
+    background-color: #fff;
+    padding: 25px;
 }
 
-.wrapper p {
+.contactWrapperOne p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     text-align: left;
 }
 
-.wrapper ul {
+.contactWrapperOne ul {
     text-align: left;
 }
 
-.wrapper h2 {
+.contactWrapperOne h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.contactWrapperOne h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
 }
 
-.container {
+.contactWrapperTwo {
+    width: 15%;                    
+    padding: 25px;
+    text-align: center;
+    box-sizing: border-box;  
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin: 10px; 
+    background-color: #fff;
+    min-height: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.contactContainerOne {
     margin: auto;
     overflow: hidden;
     width: 60%;
     padding: 2rem 0;
 }
 
-/* Special Wrappers for index.html */
+.contactContainerTwo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;           
+    flex-wrap: wrap;    
+    padding-top: 25px;  
+    padding-bottom: 25px;   
+}
 
-.introwrapper {
+.contactImage {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain; 
+}
+
+/* ------------------------------------- */
+/* ----------- Demo.html CSS ----------- */
+/* ------------------------------------- */
+
+.demoWrapperOne {
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.demoWrapperOne p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.demoWrapperOne ul {
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+}
+
+.demoWrapperOne li {
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    margin: .75rem;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #00cc33, #353535);
+    background-color: #00cc33;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+}
+
+.demoWrapperOne h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.demoWrapperOne h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-size: 23px;
+}
+
+
+
+.demoWrapperTwo {
+    padding: 25px;
+    box-sizing: border-box;  
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin: 10px; 
+    background-color: #fff;
+    min-height: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.demoContainer {
+    margin: auto;
+    overflow: hidden;
+    width: 60%;
+    padding: 2rem 0;
+}
+
+.demolist {
+    list-style: disc;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    display: block;
+}
+
+.demoBtn {
+    display: inline-block;
+    padding: 10px 50px;
+    font-size: 2.2rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+
+
+}
+
+.demoBtn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* ------------------------------------- */
+/* --------- Pricing.html CSS ---------- */
+/* ------------------------------------- */
+
+.pricingWrapperOne {
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+    text-align: center;
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin: 10px; 
+    background-color: #fff;
+    padding: 25px;
+}
+
+.pricingWrapperOne p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.pricingWrapperOne ul {
+    text-align: left;
+}
+
+.pricingWrapperOne h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: center;
+}
+.pricingWrapperOne h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+.pricingWrapperTwo {
+    width: 30%;                    
+    padding: 25px;
+    text-align: center;
+    box-sizing: border-box;  
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin: 10px; 
+    background-color: #fff;
+    min-height: 450px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.pricingWrapperTwo h1 {
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.pricingWrapperTwo p {
+    font-size: 165px;
+    font-weight: lighter;
+}
+
+
+
+.pricingContainerOne {
+    margin: auto;
+    overflow: hidden;
+    width: 60%;
+    padding: 2rem 0;
+}
+
+.pricingContainerTwo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;           
+    flex-wrap: wrap;    
+    padding-top: 25px;  
+    padding-bottom: 90px;  
+}
+
+
+
+.pricingDetailsSpoiler {
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+
+/* ------------------------------------- */
+/* ---------- Login.html CSS ----------- */
+/* ------------------------------------- */
+
+.loginWrapperOne {
     margin: auto;
     overflow: hidden;
     text-align: center;
@@ -111,50 +479,60 @@ footer p {
     padding: 5rem;
 }
 
-.wrapperwrapper {
-    background-color: rgba(255,255,255,0.7);
-    width: 50%;
+
+.loginWrapperTwo {
+    background-color: rgba(255,255,255,1);
+    width: 30%;
     padding: 2.3rem;
 }
 
-.introcontainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;           
-    flex-wrap: wrap;    
-    padding-top: 25px;  
-    padding-bottom: 25px;        
+.loginBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.wrapperdiv {
-    width: 25%;                    
-    padding: 25px;
-    text-align: center;
-    box-sizing: border-box;  
-    border: 2px solid #cfcfcf;
-    border-radius: 6px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    margin: 10px; 
-    background-color: #fff;
-    min-height: 350px;
-
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    align-items: center;
+.loginBtn:hover {
+    background-color: #45a049;
 }
 
-.wrapperdiv h2 {
-    text-align: center;
-}
 
-.wrapperdiv p {
+
+/* ------------------------------------- */
+/* ----------- Faq.html CSS ------------ */
+/* ------------------------------------- */
+
+.faqWrapperOne {
+    margin: auto;
+    overflow: hidden;
     text-align: left;
 }
 
-/* Special Wrappers for demo & FAQ */
+.faqWrapperOne p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
 
-.wrapperdivdemo {                   
+.faqWrapperOne ul {
+    text-align: left;
+}
+
+.faqWrapperOne h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+.faqWrapperTwo {
     padding: 25px;
     text-align: center;
     box-sizing: border-box;  
@@ -171,22 +549,82 @@ footer p {
     align-items: center;
 }
 
-.wrapperdivdemo h1 {
+.faqWrapperTwo h1 {
     font-size: 45px;
     font-weight: lighter;
 }
 
-.wrapperdivdemo h2 {
+.faqWrapperTwo h2 {
     font-size: 23px;
 }
 
 
-/* Special Wrappers for contact.html */
 
-.wrapperdivtwo {
-    width: 15%;                    
-    padding: 25px;
+.faqContainer {
+    margin: auto;
+    overflow: hidden;
+    width: 60%;
+    padding: 2rem 0;
+}
+
+.faqBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+.faqBtn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* ------------------------------------- */
+/* --------- Feedback.html CSS --------- */
+/* ------------------------------------- */
+
+.feedbackWrapperOne {
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
     text-align: center;
+}
+
+.feedbackWrapperOne p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.feedbackWrapperOne ul {
+    text-align: left;
+}
+
+.feedbackWrapperOne h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+input[type=radio] {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #1FBED6;
+    
+}
+
+
+
+.feedbackWrapperTwo {
+    padding: 25px;
+    text-align: left;
     box-sizing: border-box;  
     border: 2px solid #cfcfcf;
     border-radius: 6px; 
@@ -201,80 +639,228 @@ footer p {
     align-items: center;
 }
 
-.img {
-    width: 100%;
-    height: auto;
-    max-height: 150px;
-    object-fit: contain; 
+.feedbackWrapperTwo h1 {
+    font-size: 45px;
+    font-weight: lighter;
 }
 
-/* Special Wrappers for pricing.html */
+.feedbackWrapperTwo h2 {
+    font-size: 23px;
+}
 
-.wrapperdivthree {
-    width: 30%;                    
-    padding: 25px;
+
+
+.feedbackContainer {
+    margin: auto;
+    overflow: hidden;
+    width: 60%;
+    padding: 2rem 0;
+}
+
+.feedbackRating-Group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 20px 0;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+
+
+/* ------------------------------------- */
+/* ----------- Home.html CSS ----------- */
+/* ------------------------------------- */
+
+.homeWrapperOne {
+    margin: auto;
+    overflow: hidden;
     text-align: center;
+    padding: .5rem 0;
+    width: 100%;
+    background-image: url('/static/css/background1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    float: relative;
+    border: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 5rem;
+}
+
+.homeWrapperTwo {
+    background-color: rgba(255,255,255,0.85);
+    width: 50%;
+    padding: 2.3rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.homeWrapperThree {
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+.homeWrapperThree p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.homeWrapperThree ul {
+    text-align: left;
+}
+
+.homeWrapperThree h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+}
+
+
+
+.homeWrapperFour {
+    padding: 25px;
+    text-align: left;
     box-sizing: border-box;  
     border: 2px solid #cfcfcf;
     border-radius: 6px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     margin: 10px; 
     background-color: #fff;
-    min-height: 450px;
+    min-height: 250px;
     overflow: hidden;
     display: flex;
     flex-direction: column; 
     justify-content: space-between; 
-    align-items: center;
+    align-items: center;  
 }
 
-.wrapperdivthree h1 {
+.homeWrapperFour h1 {
     font-size: 45px;
     font-weight: lighter;
 }
 
-.wrapperdivthree p {
-    font-size: 165px;
-    font-weight: lighter;
-}
-
-.pricingcontainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;           
-    flex-wrap: wrap;    
-    padding-top: 25px;  
-    padding-bottom: 90px;        
-}
-
-/* Special Wrappers for demo.html */
-
-.demolist {
-    list-style: disc;
-    padding-left: 50px;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
+.homeWrapperFour h2 {
+    font-size: 23px;
 }
 
 
-/* Spoiler styles & special tools page wrappers */
 
-.detspoil {
-    font-size: 1.8rem;
+.homeContainer {
+    margin: auto;
+    overflow: hidden;
+    width: 60%;
+    padding: 2rem 0;
+}
+
+.homeBtn {
+    display: inline-block;
     padding: 10px 20px;
-    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 
 }
 
+.homeBtn:hover {
+    background-color: #45a049;
+}
 
-.detspoil2 {
+.homeDetailSpoiler {
     font-size: 1.2rem;
     padding: 10px 20px;
     font-weight: bold;
-
+    display: block;
+    text-align: left;
+    margin: 0; 
+    width: 100%; 
 }
 
-.wrapperdivfour {
+
+.homeParagraph {
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin: .75rem;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #00cc33, #353535);
+    background-color: #00cc33;
+    font-size: 30px;  
+    font-weight: normal;
+}
+
+
+
+/* ------------------------------------- */
+/* ---------- Tools.html CSS ----------- */
+/* ------------------------------------- */
+
+.toolWrapperOne {
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+    text-align: center;
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    margin: 10px; 
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 30px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.toolWrapperOne p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.toolWrapperOne ul {
+    text-align: left;
+}
+
+.toolWrapperOne h1 {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.toolWrapperOne h2 {
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+
+
+.toolWrapperTwo {
     width: 100%;                    
     padding: 25px;
     text-align: left;
@@ -292,157 +878,51 @@ footer p {
     align-items: left;
 }
 
-.srtbtn {
-    display: inline-block;
-    padding: 10px 250px;
-    font-size: 1.1rem;
-    background-image: linear-gradient(to right, #8d8d8d, #353535);
-    background-color: #8d8d8d;
-    border: 3px solid #000000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s;
-    margin: .5rem;
+.toolContainer {
+    margin: auto;
+    overflow: visible;
+    width: 60%;
+    padding: 2rem 0;
 }
 
-.vulbtn {
-    display: inline-block;
-    padding: 10px 250px;
-    font-size: 1.1rem;
-    background-image: linear-gradient(to right, #00cc33, #353535);
-    background-color: #00cc33;
-    border: 1px solid #008b23;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-    margin: .5rem;
-    width: 80%;
-    font-family: sans-serif;
-}
-
-
-/* Styles for Buttons */
-
-.btn {
-    display: inline-block;
+.toolDetailSpoiler {
+    font-size: 1.8rem;
     padding: 10px 20px;
-    font-size: 1.1rem;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
-
-.navbtn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    color: white;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-    font-weight: 500;
-}
-
-.navbtn:hover {
-    background-color: #45a049;
-}
-
-.demobtn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-
-}
-
-.demobtn:hover {
-    background-color: #45a049;
-}
-
-/* Other Nav Styles */
-
-.navone a {
-    padding-left: 20px;
-}
-
-/* Feedback & Survey Styles */
-
-
-.rating-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0 20px 0;
-}
-
-label {
-    font-size: 1.2rem;
     font-weight: bold;
-    color: #555;
-    display: block;
-    margin-top: 10px;
 }
 
-.wrapperdivfeedback {                   
-    padding: 25px;
-    text-align: left;
-    box-sizing: border-box;  
-    border: 2px solid #cfcfcf;
-    border-radius: 6px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    margin: 10px; 
-    background-color: #fff;
-    min-height: 350px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    align-items: center;
-}
-
-.wrapperdivfeedback h1 {
-    font-size: 45px;
-    font-weight: lighter;
-}
-
-.wrapperdivfeedback h2 {
-    font-size: 23px;
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+.toolBtn {
+    display: inline-block;
+    padding: 18px 120px;
+    font-size: 1.8rem;
+    font-weight: Bold;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
+    transition: background-color 0.3s;
+
 }
+
+.toolBtn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* ------------------------------------- */
+/* ---------- Tools Popup CSS ---------- */
+/* ------------------------------------- */
 
 /* Modal Styling */
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5); 
     justify-content: center;
     align-items: center;
 }
@@ -470,10 +950,11 @@ button {
     cursor: pointer;
 }
 
-/* Popup button Styling */
-.popup {
+
+/* Popup Styling */
+.popup-button {
     display: inline-block;
-    padding: 10px 250px;
+    padding: px 250px;
     font-size: 1.1rem;
     background-image: linear-gradient(to right, #00cc33, #353535);
     background-color: #00cc33;
@@ -483,72 +964,143 @@ button {
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s;
-    margin: .5rem;
+    margin: .6rem;
     width: 80%;
     font-family: sans-serif;
 }
 
-/* Popup button Styling */
 .content {
-    position:abolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
     background: #fff;
-    width:450px;
+    width: 450px;
     height: 220px;
-    z-index:2;
-    text-align:center;
-    padding:20px;
-    box-sizing:border-box;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+
+.headed {
+    background-color: #41af44;
+    background-image: linear-gradient(to right, #41af44 , #333);
+    border: 2px solid #cfcfcf; 
+    border-radius: 6px; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.headed h2 {
+    color: #ffffff;
+}
+
+
 /* Popup container */
-#popup {
+.popup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 400px;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    min-height: 80vh;
+    height: auto;
+    background-color: #ffffff;
+    border: 2px solid #cfcfcf; 
+    border-radius: 6px; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    z-index: 1000; /* Ensures the popup is above other content */
+    z-index: 1000; 
 }
+
+.popup p { 
+    text-align: left;
+    margin: 10px 0; 
+    line-height: 1.6; 
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.popup h3 {
+    text-align: left;
+    margin: 10px 0; 
+    line-height: 1.6; 
+    font-size: 24px;
+    font-weight: Bold;
+}
+
 
 /* Close button inside popup */
-#popup button {
-    position:absolute;
-    right:20px;
-    top:20px;
-    width:30px;
-    height:30px;
-    background:#222;
-    color:#fff;
-    font-size:25px;
-    font-weight:600;
-    line-height:30px;
-    text-align:center;
-    border-radius:50%;
+.popup button {
+    position: absolute;
+    right: 40px;
+    top: 21px;
+    width: 50px;
+    height: 50px;
+    background: #c70000;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    border: 2px solid #5e5e5e7e;
+    border-radius: 50%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
-#popup button:hover {
-    background-color: #695957;
+.popup button:hover {
+    background-color: #ff2d2d;
+    transform: scale(1.1);
 }
 
 /* Overlay background */
-#popup::before {
+.popup::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1; /* Positioned behind the popup */
+    z-index: -1; 
+}
+
+
+/* ------------------------------------- */
+/* ------- Dashboard Updates CSS ------- */
+/* ------------------------------------- */
+
+
+
+#recent-clicks li {
+    border: 2px solid #cfcfcf;
+    border-radius: 6px; 
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin: .75rem;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #00cc33, #353535);
+    background-color: #00cc33;
+    width: 800px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+#recent-clicks {
+    list-style: none;
+}
+
+
+#click-list {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

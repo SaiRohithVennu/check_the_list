@@ -12,10 +12,9 @@
 </head>
 
 <body class="bg-gradient-to-br from-blue-100 to-gray-100 min-h-screen font-sans antialiased">
-	<header>
+	<header>Check-The-List - Cybersecurity Hardening
 	<!-- Navbar -->
 	<nav class="bg-blue-600 text-white px-6 py-4 shadow-md flex justify-between items-center">
-		<h1 class="text-xl md:text-2xl font-bold">Check-The-List - Cybersecurity Hardening</h1>
 		<div class="space-x-4 text-sm md:text-base">
 			<a href="login" class="navbtn">Logout</a>
 			<a href="{% url 'index'%}" class="navbtn">Home</a>
@@ -32,13 +31,13 @@
 			<form class="space-y-4" action="" method="POST">
 				{%csrf_token%}
 				{% if error_message %}
-				<div align="center" style="color: red;">
+				<div style="color: red;">
 					<h2>
 						{{error_message}}
 					</h2>
 				</div>
 				{% endif %}
-				<h2 class="text-xl font-semibold"> Signup </h2>
+				<h2 class="text-xl font-semibold"> Signup Here</h2> <hr />
 				<div>
 					<label for="username" class="block mb-1 font-medium">Username</label>
 					<input type="text" id="username" name="username" placeholder="Enter your username..." class="w-full p-2 border rounded">

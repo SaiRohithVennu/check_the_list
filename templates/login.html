@@ -16,7 +16,6 @@
 	<nav class="bg-blue-600 text-white px-6 py-4 shadow-md flex justify-between items-center">
 		<h1 class="text-xl md:text-2xl font-bold">Check-The-List - Cybersecurity Hardening</h1>
 		<div class="space-x-4 text-sm md:text-base">
-			<a href="login" class="navbtn">Logout</a>
 			<a href="signup" class="navbtn">Signup</a>
 			<a href="{% url 'index'%}" class="navbtn">Home</a>
 		</div>
@@ -28,7 +27,7 @@
 		<div class="bg-white/60 backdrop-blur-md p-8 shadow-2xl rounded-2xl w-full max-w-md border border-gray-200">
 			<div class="loginWrapperOne">
                 <div class="loginWrapperTwo">
-			<h2 class="text-2xl font-semibold text-center mb-6">Login to your account</h2>
+			<h2 class="text-2xl font-semibold text-center mb-6">Login to your account</h2> <hr />
 
 			{% if error_message %}
 				<div class="mb-4 text-red-600 text-center font-medium">
@@ -42,12 +41,12 @@
 				<div>
 					<label for="username" class="block text-sm font-medium mb-1">Username</label>
 					<input type="text" id="username" name="username" placeholder="Enter your username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-				</div>
+				</div> <br><br>
 
 				<div>
 					<label for="password" class="block text-sm font-medium mb-1">Password</label>
 					<input type="password" id="password" name="password" placeholder="Enter password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-				</div>
+				</div> <br><br>
 
 				<button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
 					Login
