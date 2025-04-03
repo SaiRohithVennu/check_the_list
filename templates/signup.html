@@ -28,15 +28,14 @@
 		<div class="bg-white p-8 shadow-md rounded-lg max-w-md w-full">
 			
 			<!-- Login form -->
+			<div class="loginWrapperOne">
+			<div class="loginWrapperTwo">
 			<form class="space-y-4" action="" method="POST">
 				{%csrf_token%}
 				{% if error_message %}
 					<div style="color: red;">
-					<div class="loginWrapperOne">
-					<div class="loginWrapperTwo"><br>	<h2>
-						{{error_message}}
-						</h2>
-							</div>
+					<br>	
+						<h2> {{error_message}} </h2>
 							{% endif %}
 							<h2 class="text-xl font-semibold"> Signup Here</h2> <hr />
 							<div>
@@ -56,12 +55,13 @@
 								<input type="password" id="repeatPassword" name="repeatPassword" placeholder="Re-Enter password..." class="w-full p-2 border rounded">
 							</div>
 
+
 				<button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"> Login</button>
 			</form>
 		</div>
 		</div>
 		</div>
-		
+		</div>
 	</div>
 	
 </body>
