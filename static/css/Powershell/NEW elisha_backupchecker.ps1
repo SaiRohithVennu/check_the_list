@@ -4,6 +4,7 @@
 $AdminCheck = [System.Security.Principal.WindowsPrincipal] [System.Security.Principal.WindowsIdentity]::GetCurrent()
 if (-not $AdminCheck.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "ERROR: This script must be run as Administrator!" -ForegroundColor Red
+    pause
     exit
 }
 

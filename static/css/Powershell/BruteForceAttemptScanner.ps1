@@ -1,3 +1,5 @@
+Write-Output "Press Anything to Start"
+
 # Get active network connections
 $ActiveConnections = Get-NetTCPConnection | Where-Object { $_.State -eq 'Established' } | 
     Select-Object LocalAddress, RemoteAddress, RemotePort
@@ -64,8 +66,8 @@ foreach ($ip in $SuspiciousIPs.Keys) {
 }
 
 # Define file paths for CSV export
-$FailedLoginsFile = "C:\ScriptTest\FailedLogins.csv"
-$SuspiciousIPsFile = "C:\ScriptTest\SuspiciousIPs.csv"
+$FailedLoginsFile = "C:\FailedLogins.csv"
+$SuspiciousIPsFile = "C:\SuspiciousIPs.csv"
 
 # Export Failed Login Attempts to CSV
 $FailedLoginsExport = $FailedCounts.GetEnumerator() | 
@@ -77,7 +79,7 @@ $SuspiciousIPsExport = $SuspiciousIPs.GetEnumerator() |
     Select-Object @{Name="IP"; Expression={$_.Key}}, @{Name="Connection Count"; Expression={$_.Value}}
 $SuspiciousIPsExport | Export-Csv -Path $SuspiciousIPsFile -NoTypeInformation
 
-Write-Output "Exported Failed Login Attempts and Suspicious IPs to CSV files."
+Write-Output "Exported Failed Login Attempts and Suspicious IPs to CSV files on the C: Drive."
 
 pause
 

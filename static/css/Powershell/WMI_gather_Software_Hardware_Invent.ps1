@@ -1,5 +1,8 @@
 # Using PowerShell scripting 
 
+pause
+Write-Output "Scanning Now....."
+
 # Gathering hardware inventory
 $hardwareInfo = Get-WmiObject -Class Win32_ComputerSystem
 $cpuInfo = Get-WmiObject -Class Win32_Processor
@@ -18,7 +21,7 @@ Write-Output "Number of Cores: $($cpuInfo.NumberOfCores)"
 Write-Output "Number of Logical Processors: $($cpuInfo.NumberOfLogicalProcessors)"
 
 # Output software information
-Write-Output "`nSoftware Information:"
+Write-Output "Software Information:"
 Write-Output "----------------------"
 foreach ($software in $softwareInfo) {
     Write-Output "Name: $($software.Name)"
@@ -28,7 +31,9 @@ foreach ($software in $softwareInfo) {
     Write-Output "----------------------"
 }
 
+pause
+
 # Save the information to a file
-$hardwareInfo | Out-File -FilePath "C:\Inventory\HardwareInfo.txt"
-$softwareInfo | Out-File -FilePath "C:\Inventory\SoftwareInfo.txt"
+$hardwareInfo | Out-File -FilePath "C:\HardwareInfo.txt"
+$softwareInfo | Out-File -FilePath "C:\SoftwareInfo.txt"
 
