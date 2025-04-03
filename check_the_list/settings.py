@@ -108,6 +108,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Fixed this
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Collect static for deployment
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Enable Whitenoise compression
