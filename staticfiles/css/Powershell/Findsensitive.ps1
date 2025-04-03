@@ -8,6 +8,7 @@ $emailPattern = '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,7}\b'
 # Check if the directory exists
 if (-Not (Test-Path -Path $directory)) {
     Write-Error "The directory path '$directory' does not exist. Please provide a valid path."
+    pause
     exit
 }
 
@@ -16,8 +17,12 @@ try {
     $files = Get-ChildItem -Path $directory -Recurse -File
 } catch {
     Write-Error "Error accessing files in the directory. Ensure you have the necessary permissions."
+    pause
     exit
 }
+
+Write-Output "Scanning Please Wait..."
+Write-Output "-----------------------"
 
 foreach ($file in $files) {
     try {
@@ -37,3 +42,5 @@ foreach ($file in $files) {
         Write-Warning "Could not read file: $($file.FullName). Skipping."
     }
 }
+
+pause

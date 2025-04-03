@@ -48,7 +48,7 @@ foreach ($rule in $firewallRules) {
 }
 
 # Export results to CSV
-$results | Export-Csv -Path "C:\ScriptTest\SecurityCheckResults.csv" -NoTypeInformation
+$results | Export-Csv -Path "C:\SecurityCheckResults.csv" -NoTypeInformation
 
-Write-Output "Results have been exported to C:\ScriptTest\SecurityCheckResults.csv"
+Write-Output "Results have been successfully gathered and exported to C:\SecurityCheckResults.csv"
 pause

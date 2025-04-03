@@ -56,3 +56,5 @@ if ($LockoutThreshold -eq "Not Set") {
 } else {
     Write-Host "Account lockout threshold is set to $LockoutThreshold attempts." -ForegroundColor Green
 }
+
+pause

@@ -4,6 +4,7 @@
 $AdminCheck = [System.Security.Principal.WindowsPrincipal] [System.Security.Principal.WindowsIdentity]::GetCurrent()
 if (-not $AdminCheck.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "ERROR: This script must be run as Administrator!" -ForegroundColor Red
+    pause
     exit
 }
 
@@ -14,6 +15,7 @@ $Updates = (New-Object -ComObject Microsoft.Update.Searcher).Search("IsInstalled
 # If no required updates are detected print this
 if ($Updates.Count -eq 0) {
     Write-Host "Your system is fully updated! No missing updates found." -ForegroundColor Green
+	pause
     exit
 }
 
